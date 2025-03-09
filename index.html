@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="less/main.less">
+    <script defer src="contacto.js"></script>
     <title>Portafolio - Ilda Quezada</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -19,10 +20,10 @@
             </label>
             <input type="checkbox" id="check" class="menu-toggle" />
             <ul>
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">Acerca de mi</a></li>
                 <li><a href="#">Portafolio</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -50,6 +51,28 @@
         </div>
     </section>
 </body>
+
+<section class="contact">
+    <div class="container_contacto">
+        <h2>Contacto</h2>
+        <p>Si deseas ponerte en contacto conmigo, completa el siguiente formulario.</p>
+        <form id="contactForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <small class="error" id="nameError"></small>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <small class="error" id="emailError"></small>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <small class="error" id="messageError"></small>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
 
 <footer class="footer">
     <div class="container">
