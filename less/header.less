@@ -1,0 +1,147 @@
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+
+  .nav__content {
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: @primary-color-dark;
+    transition: 0.3s;
+
+    &:hover {
+      color: @primary-color-dark;
+    }
+  }
+
+  .checkbox {
+    display: none;
+  }
+
+  input {
+    display: none;
+  }
+
+  .checkbox i {
+    font-size: 2rem;
+    color: @primary-color;
+    cursor: pointer;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+
+    li a {
+      padding: 0.5rem 1rem;
+      border: 2px solid transparent;
+      font-weight: 600;
+      color: @text-dark;
+      transition: 0.3s;
+
+      &:hover {
+        border-top-color: @secondary-color;
+        border-bottom-color: @secondary-color;
+        color: @secondary-color;
+      }
+    }
+  }
+}
+
+@media (max-width: #breaks[tablet]) {
+  .nav__content {
+    padding: 1rem;
+  }
+
+  .logo a {
+    font-size: 1.2rem;
+  }
+
+  .checkbox {
+    display: block;
+  }
+
+  .checkbox i {
+    font-size: 2.5rem;
+  }
+
+  input:checked+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    z-index: 100;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: #breaks[desktop]) {
+  .nav__content {
+    padding: 1.5rem 1rem;
+  }
+
+  ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .checkbox {
+    display: block;
+  }
+
+  .checkbox i {
+    display: block;
+  }
+}
+
+@media (max-width: #breaks[mobile]) {
+  .nav__content {
+    padding: 1rem;
+  }
+
+  .checkbox {
+    display: block;
+  }
+
+  .checkbox i {
+    font-size: 2.5rem;
+    display: block;
+  }
+
+  input:checked + ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    z-index: 100;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  ul {
+    display: none;  // Hide the menu by default
+  }
+}

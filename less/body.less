@@ -1,0 +1,135 @@
+.section {
+    background-color: @extra-light;
+}
+
+.section__container {
+    min-height: 100vh;
+    margin: auto;
+    margin-left: 60px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    @media (max-width: #breaks[tablet]) {
+        grid-template-columns: 1fr;
+        padding: 8rem 1rem;
+        margin-left: 15px;
+    }
+
+    @media (max-width: #breaks[mobile]) {
+        padding: 7rem;
+        align-items: center;
+        margin-left: 5px;
+    }
+
+    @media (max-width: #breaks[desktop]) {
+        
+        padding: 8rem 1rem;
+        
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtitle {
+    letter-spacing: 2px;
+    color: @text-light;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: @text-dark;
+    margin-bottom: 1rem;
+
+    span {
+        font-weight: 600;
+    }
+
+    @media (max-width: #breaks[tablet]) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+.description {
+    line-height: 1.5rem;
+    color: @text-light;
+    margin-bottom: 2rem;
+
+    @media (max-width: #breaks[tablet]) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.action__btns {
+    display: flex;
+    gap: 1rem;
+
+    button {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        padding: 1rem 2rem;
+        outline: none;
+        border: 2px solid @primary-color;
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+
+        @media (max-width: #breaks[tablet]) {
+            font-size: 0.875rem;
+            padding: 0.8rem 1.5rem;
+        }
+    }
+}
+
+.hire__me {
+    background-color: @primary-color;
+    color: #ffffff;
+
+    &:hover {
+        background-color: @primary-color-dark;
+    }
+}
+
+.portfolio {
+    color: @primary-color;
+
+    &:hover {
+        background-color: @primary-color-dark;
+        color: #ffffff;
+    }
+}
+
+.image {
+    display: grid;
+    place-items: center;
+
+    @media (min-width: #breaks[desktop]) {
+        width: 30rem;
+    }
+
+    @media (min-width: #breaks[wide]) {
+        width: 35rem;
+        margin-left: 50px;
+        align-items: center;
+    }
+
+    img {
+        width: min(25rem, 90%);
+        border-radius: 100%;
+
+        @media (max-width: #breaks[tablet]) {
+            width: 80%; 
+        }
+    }
+}
